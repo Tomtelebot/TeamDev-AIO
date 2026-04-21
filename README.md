@@ -284,7 +284,7 @@ GET /api/v1/tb?url=https://1024terabox.com/s/xxx&api=td_xxx
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/teamdev-aio.git
+git clone https://github.com/justfortestingnothibghere/TeamDev-AIO
 cd teamdev-aio
 
 # Build the image
