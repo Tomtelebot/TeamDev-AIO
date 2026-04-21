@@ -32,6 +32,7 @@ _HEADER_KEY = "xAPIverse-Key"
 
 
 async def _get_next_key() -> str | None:
+    db = get_db()
     keys = await db.terabox_keys.find({"enabled": True}).sort("usage_count", 1).to_list(100)
     if not keys:
         return None
@@ -80,3 +81,4 @@ async def fetch(url: str):
         return None, data.get("message", "unknown_error")
 
     return data, None
+  
