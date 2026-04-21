@@ -280,6 +280,48 @@ GET /api/v1/tb?url=https://1024terabox.com/s/xxx&api=td_xxx
 
 ---
 
+## ◈ Free Deployment Options
+
+### ◆ Render.com (Free Tier)
+
+1. Fork this repo to GitHub
+2. Go to [render.com](https://render.com) → Sign up with GitHub
+3. **New** → **Blueprint** → Select your forked repo
+4. Add environment variables:
+   - `MONGO_URI` = your MongoDB Atlas connection string
+   - `SECRET_KEY` = any random string (or let Render auto-generate)
+5. Set build command: `pip install -r requirements.txt`
+6. Set start command: `uvicorn main:app --host 0.0.0.0 --port 8000`
+7. Deploy — free tier includes 750 hours/month
+
+**Note:** Free tier sleeps after 15 min of inactivity. Wake it with a ping cron job.
+
+### ◆ Railway.app (Free Tier)
+
+1. Fork this repo to GitHub
+2. Go to [railway.app](https://railway.app) → Sign up with GitHub
+3. **New Project** → **Deploy from GitHub repo**
+4. Add `MONGO_URI` variable
+5. Done — free tier includes $5 credits/month
+
+### ◆ Koyeb (Free Tier)
+
+1. Fork this repo to GitHub
+2. Go to [koyeb.com](https://koyeb.com) → Sign up with GitHub
+3. **Create App** → **Import from GitHub**
+4. Add `MONGO_URI` and `SECRET_KEY` variables
+5. Set start command: `python main.py`
+6. Deploy — free tier includes 2 apps, 512MB RAM
+
+### ◆ Free MongoDB Atlas
+
+Use [MongoDB Atlas Free Tier](https://mongodb.com/atlas) (M0 Sandbox):
+- 512MB storage
+- Shared CPU
+- Sufficient for personal projects
+
+---
+
 ## ◈ Self-Host with Docker
 
 ```bash
