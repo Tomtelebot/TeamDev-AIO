@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Logs
+*.log
+app.log
+
+# Uvicorn
+.uvicorn/
+pidfile.pid
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright
+playwright-report/
+test-results/
+.playwright/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
